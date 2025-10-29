@@ -1,0 +1,299 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  background-color: #0a1f1e !important;
+}
+
+.navbar .navbar-brand img {
+  width: 260px;
+  height: 80px;
+  margin-left: 50px;
+}
+.botao-marcar a {
+  text-decoration: none; /* tira o sublinhado */
+  color: #fff; /* cor do texto */
+  background-color: #1dc5bf; /* cor de fundo */
+  padding: 8px 16px; /* espaçamento interno */
+  border-radius: 6px; /* bordas arredondadas */
+  transition: background 0.3s ease;
+  font-size: 20px;
+  margin-left: 50px;
+  margin-right: 50px;
+  display: inline-block; /* para o padding funcionar direito */
+}
+
+.botao-marcar a:hover {
+  background-color: #08c437; /* cor mais escura no hover */
+  color: #fff; /* mantém o texto branco */
+}
+.lista-inicio .nav-link {
+  position: relative;
+  color: #fff; /* cor normal do link */
+  text-decoration: none;
+  overflow: hidden;
+  font-size: 20px;
+}
+.lista-inicio .nav-link:hover {
+  color: #19c7bd; /* cor normal do link */
+}
+
+/* só aplica o efeito se o link não estiver dentro do .botao-marcar */
+.nav-item:not(.botao-marcar) .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #1dc5bf;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-item:not(.botao-marcar) .nav-link:hover::after {
+  width: 100%;
+}
+/* Carousel principal */
+#carouselExampleCaptions {
+  max-width: 80%; /* define largura máxima do carousel */
+  margin: 100px auto; /* centraliza */
+  border-radius: 15px; /* bordas arredondadas do carousel */
+  overflow: hidden; /* garante que as imagens fiquem dentro das bordas */
+  -webkit-box-shadow: 0px 0px 35px -5px #000000;
+  box-shadow: 0px 0px 35px -5px #000000;
+}
+
+/* Cada slide */
+.carousel-item img {
+  width: 100%; /* ocupa toda a largura do item */
+  height: 500px; /* altura fixa */
+  object-fit: cover; /* mantém proporção e corta excesso */
+}
+
+.titulo-carousel {
+  font-size: 30px;
+  margin: 20px 60px;
+}
+
+.linha-carousel {
+  width: 500px;
+  border: 2px solid #1dc5bf;
+  margin: 0 60px 20px 60px;
+}
+.carousel-caption {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 1); /* opcional: sombra leve */
+  background: rgba(0, 0, 0, 0.3);
+}
+.carousel-caption h5 {
+  color: white; /* cor do texto */
+
+  font-weight: bold;
+  font-size: 50px;
+}
+.carousel-caption p {
+  color: white; /* cor do texto */
+
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.card-img-top-overlay .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /*     background: rgba(120,120,120,.4); */
+}
+a {
+  text-decoration: none !important;
+}
+.card-img-top-overlay .card-badge.top-right {
+  top: 1rem;
+  right: 1rem;
+}
+.card-img-top-overlay .card-badge.top-left {
+  top: 1rem;
+  left: 1rem;
+}
+/* for images to be same height */
+.img-same-height {
+  object-fit: cover;
+  height: 250px;
+}
+.card-img-top-overlay .card-badge {
+  position: absolute;
+  font-size: 0.8125rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+  box-shadow: 0 0.8rem 1.2rem #343a4014;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  border-radius: 0.25rem;
+  z-index: 1000;
+}
+.card-img,
+.card-img-top {
+  border-top-left-radius: calc(0.1875rem + 0px);
+  border-top-right-radius: calc(0.1875rem + 0px);
+}
+.shape.bottom {
+  bottom: -2px;
+  left: 0;
+  right: 0;
+}
+
+.shape {
+  position: absolute;
+  pointer-events: none;
+  overflow: hidden;
+}
+.shape > svg {
+  width: auto;
+  height: 100%;
+}
+
+.shape.bottom > svg {
+  width: 100%;
+}
+.card-body {
+  flex: 1 1 auto;
+  padding: 1.5rem;
+}
+.card {
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+/* ----- Estilos apenas para o carrossel odontológico ----- */
+.clinic-carousel {
+  padding: 60px 50px;
+  font-family: "Roboto", sans-serif;
+}
+
+.clinic-carousel-title {
+  margin-bottom: 40px;
+  font-size: 22px;
+  font-weight: 700;
+  text-transform: capitalize;
+  position: relative;
+  display: inline-block;
+}
+
+.clinic-carousel-title::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  bottom: -6px;
+  left: 0;
+  background: #f2f2f2;
+  border-radius: 2px;
+}
+.clinic-carousel-title::after {
+  content: "";
+  position: absolute;
+  width: 32px;
+  height: 4px;
+  bottom: -6px;
+  left: 0;
+  background: #e73700;
+  border-radius: 2px;
+}
+
+/* ----- Card ----- */
+.clinic-card {
+  margin: 0 15px 60px;
+  width: 320px;
+  height: 400px;
+  display: flex;
+  align-items: flex-end;
+  background: #343434 no-repeat center center / cover;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+}
+
+.clinic-card.active {
+  width: 500px;
+  box-shadow: 12px 40px 40px rgba(0, 0, 0, 0.25);
+}
+
+.clinic-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+}
+
+/* ----- Descrição ----- */
+.clinic-card-desc {
+  padding: 0 24px 12px;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+  transform: translateY(calc(100% - 54px));
+  transition: all 0.4s ease-in-out;
+}
+
+.clinic-card.active .clinic-card-desc {
+  transform: none;
+}
+
+.clinic-card-desc p {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: all 0.4s ease-in-out 0.2s;
+}
+
+.clinic-card.active .clinic-card-desc p {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ----- Navegação do OwlCarousel ----- */
+.clinic-carousel-slider .owl-dots {
+  margin-top: -20px;
+  position: relative;
+  z-index: 5;
+}
+/* REGRAS PADRÃO (Telas >= 901px) */
+
+#carousel-grande {
+  display: block; /* Garante que o carrossel grande esteja visível */
+}
+
+.carousel-pequeno {
+  display: none; /* Esconde o carrossel pequeno por padrão */
+}
+
+/* --- MEDIA QUERY: Para telas de 900px ou menores --- */
+@media (max-width: 900px) {
+  /* ESCONDE o carrossel grande */
+  #carousel-grande {
+    display: none !important;
+  }
+
+  /* MOSTRA o carrossel pequeno */
+  .carousel-pequeno {
+    display: block !important;
+  }
+}
+
+/* Cores oficiais das redes sociais */
+.text-facebook {
+  color: #1877f2 !important; /* Azul Facebook */
+}
+.text-instagram {
+  color: #e4405f !important; /* Rosa Instagram */
+}
+.text-whatsapp {
+  color: #25d366 !important; /* Verde WhatsApp */
+}
